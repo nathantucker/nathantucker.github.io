@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <meta charset="UTF-8">
+        <title>Suicide Rate Visualisation</title>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    </head>
+    
+    <body>
+        <div class="wrapper" id="chart-line1"></div>
+        
+        <script type="text/javascript">
+
+            d3.csv('suicide_rate.csv', function(error, data) {
+            data.forEach(function (d) {
+                d.year = +d.year;
+                d.australia = +d.australia;
+                d.canada = +d.canada;
+                d.france = +d.france;
+                d.unitedkingdom = +d.unitedkingdom;
+                d.unitedstates = +d.unitedstates;
+            });
+
+            var chart = InitiateChart(data, 'year', {
+                'United Kingdom': {column: 'unitedkingdom'},
+                'Australia': {column: 'australia'},
+                'Canada': {column: 'canada'},
+                'United States': {column: 'unitedstates'},
+                'France': {column: 'france'}
+            }, {xAxis: 'Years', yAxis: 'Suicides (Per Hundred Thousands)'});
+            chart.bind("#chart-line1");
+            chart.render();
+            });
+
+        </script>
+        
+        <script src="JS/suicidevis.js" charset="utf-8"></script>
+    
+    </body>
+    
+</html>
