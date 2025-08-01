@@ -1,0 +1,486 @@
+html {
+    margin: 0;
+    color: #232423;
+    font-family: 'Zen Old Mincho', serif;
+    -ms-overflow-style: none;
+    /* scrollbar-width: none; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+section {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    width: 100%;
+    padding: 60px;
+}
+
+h1 {
+    font-size: 84px;
+    line-height: 80px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    transition: all .6s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #494b49;
+}
+
+
+section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+section h1 {
+    margin: 0;
+}
+
+section h2 {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+section h4 {
+    margin-top: 4px;
+}
+
+div.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+div.row > div {
+    width: 100%;
+}
+
+div.row div.row {
+    max-width: 60%;
+}
+
+/* div.row > div:first-child {
+    width: 50%;
+}
+
+div.row > div:last-child {
+    width: 50%;
+} */
+
+.text-center {
+    text-align: center;
+}
+
+ol {
+    width: 100%;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+ol li {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+ol li img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+ul {
+    padding-left: 14px;
+    margin-bottom: 0;
+}
+
+
+ul li {
+    font-size: 14px;
+}
+
+.dot-points {
+    margin-top: 25px;
+}
+
+.dot-points:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.dot-points:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.present:after {
+    width: 7px;
+    height: 7px;
+    left: 1px;
+}
+
+.single:before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.single:after {
+    display: none;
+}
+
+.dot-points {
+    position: relative;
+    padding-left: 50px;
+    overflow: hidden;
+}
+
+.dot-points .line-vertical {
+    background-color: black;
+    position: absolute;
+    left: 4px;
+    top: 10px;
+}
+
+.show-for-small {
+    display: none;
+}
+
+/* Intro */
+.intro {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+}
+
+.intro div.row > div:first-child {
+    width: 65%;
+}
+
+.intro div.row > div:last-child {
+    width: 35%;
+}
+
+.intro h4 {
+    margin-top: 14px;
+}
+
+/* About */
+.about div.row {
+    gap: 60px;
+}
+
+.about div.row > div img {
+    width: 100%;
+}
+
+#about-img {
+    position: relative;
+}
+
+#about-img:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('About/kaos.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease .2s;
+}
+
+#about-img.kaos:before {
+    opacity: 1;
+}
+
+/* Technologies */
+.technologies div.row > div {
+    width: 100%;
+}
+
+/* listings */
+.listings {
+    position: relative;
+    overflow: hidden;
+}
+
+.listings div.row:nth-child(2) {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    padding-bottom: 30px;
+}
+
+.listings::-webkit-scrollbar {
+    display: none;
+}
+
+/* .listings div.row:nth-child(2) > div {
+    max-width: 45%;
+} */
+
+.listings h3 {
+    margin: 0;
+}
+
+.listings p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 734px) {
+    .content-container {
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
+    
+    .row {
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    .row > div {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    ol {
+        gap: 25px;
+    }
+    
+    ol li {
+        width: 45%;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    ol li img {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 4px;
+        display: block;
+    }
+
+    ul {
+        padding-left: 14px;
+    }
+
+    .dot-points {
+        position: relative;
+        padding-left: 0;
+        padding-right: 25px;
+    }
+
+    .hide-for-small {
+        display: none !important;
+    }
+
+    .show-for-small {
+        display: block !important;
+    }
+
+    .single:before {
+        display: none;
+    }
+
+    /* Intro */
+    .intro .row > div:last-child {
+        margin-top: 10px;
+    }
+
+    /* Listings */
+    .listings div.row:nth-child(2) > div {
+        min-width: 100%;
+    }
+}
+
+/* Animations */
+.fade-up-2s,
+.fade-up-4s,
+.fade-up-6s,
+.fade-up-8s,
+.fade-up-10s,
+.fade-up-12s,
+.fade-up-14s,
+.fade-up-16s,
+.fade-up-18s,
+.fade-up-20s,
+.fade-up-22s,
+.fade-up-24s,
+.fade-up-26s,
+.line-vertical {
+    opacity: 0;
+}
+
+.is-visible .fade-up-2s {
+    position: relative;
+    animation: fadeUp 1s forwards .2s;
+}
+
+.is-visible .fade-up-4s {
+    position: relative;
+    animation: fadeUp 1s forwards .4s;
+}
+.is-visible .fade-up-6s {
+    position: relative;
+    animation: fadeUp 1s forwards .6s;
+}
+
+.is-visible .fade-up-8s {
+    position: relative;
+    animation: fadeUp 1s forwards .8s;
+}
+
+.is-visible .fade-up-10s {
+    position: relative;
+    animation: fadeUp 1s forwards 1s;
+}
+.is-visible .fade-up-12s {
+    position: relative;
+    animation: fadeUp 1s forwards 1.2s;
+}
+.is-visible .fade-up-14s {
+    position: relative;
+    animation: fadeUp 1s forwards 1.4s;
+}
+.is-visible .fade-up-16s {
+    position: relative;
+    animation: fadeUp 1s forwards 1.6s;
+}
+.is-visible .fade-up-18s {
+    position: relative;
+    animation: fadeUp 1s forwards 1.8s;
+}
+.is-visible .fade-up-20s {
+    position: relative;
+    animation: fadeUp 1s forwards 2s;
+}
+.is-visible .fade-up-22s {
+    position: relative;
+    animation: fadeUp 1s forwards 2.2s;
+}
+.is-visible .fade-up-24s {
+    position: relative;
+    animation: fadeUp 1s forwards 2.4s;
+}
+.is-visible .fade-up-26s {
+    position: relative;
+    animation: fadeUp 1s forwards 2.6s;
+}
+.is-visible .fade-up-28s {
+    position: relative;
+    animation: fadeUp 1s forwards 2.8s;
+}
+
+.is-visible .line-vertical {
+    animation: lineVerticalAnimation 1s forwards 1s;
+}
+
+@keyframes hidden {
+    from   {
+        opacity: 1;
+        display: block;
+    }
+    to   {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes circleAnimation {
+    from   {
+        width: 0;
+        height: 0;
+    }
+    to   {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@keyframes lineVerticalAnimation {
+    from   {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    to   {
+        width: 1px;
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeUp {
+    from   {
+        opacity: 0;
+        bottom: -20px;
+    }
+    to   {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes fadeDown {
+    from   {
+        opacity: 1;
+        bottom: 0;
+    }
+    to   {
+        opacity: 0;
+        bottom: -20px;
+    }
+}
