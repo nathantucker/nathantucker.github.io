@@ -69,13 +69,15 @@ header {
     z-index: 3;
 }
 
+.header-toggle {
+    padding-top: 20px;
+}
+
 .logo {
-    width: 124px;
-    height: 124px;
-    object-fit: contain;
-    opacity: 0;
-    animation: flicker .6s 0s forwards;
-    pointer-events: none;
+    width: 102px;
+    aspect-ratio: 1;
+    border: 1px solid white;
+    background: transparent;
 }
 
 .menu {
@@ -84,6 +86,9 @@ header {
     margin-top: 40px;
     gap: 10px;
     opacity: 0;
+}
+
+body:not(.loaded) .menu {
     animation: flicker .6s 5.5s forwards;
 }
 
@@ -101,10 +106,37 @@ header {
 }
 
 .loaded * {
-    animation: flicker .6s 0s forwards;
+    opacity: 1;
 }
 
-/* contact */
+.loaded [data-typer-output]::after {
+    display: none;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    position: relative;
+}
+
+.modal-item {
+    height: 100%;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.modal-item img {
+    height: 100%;
+}
+
+.modal-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #contact a {
     display: inline-flex;
     gap: 10px;
@@ -164,7 +196,16 @@ header {
         color: white;
         display: block;
         opacity: 0;
-        animation: flicker .6s 6.5s forwards !important;
+        animation: flicker .6s 5.5s forwards !important;
+
+        .loaded & {
+            animation-delay: 0s !important;
+        }
+    }
+
+    /* global elements */
+    .hide-for-small {
+        display: none;
     }
 }
 

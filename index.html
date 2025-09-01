@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>nathan tucker</title>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="logo"></div>
+            <a class="menu-burger" onclick="handleMenu()">menu</a>
+        </div>
+        <div class="header-toggle">
+            <div data-typer-output="homepage"></div>
+            <h1 data-typer="homepage" data-typer-delay="800">nathan tucker
+                melbourne, victoria</h1>
+            <div class="menu homepage--menu">
+                <a onclick="handleHash('about')">about</a>
+                <a onclick="handleHash('design')">designs</a>
+                <a onclick="handleHash('development')">development</a>
+                <a onclick="handleHash('music')">music</a>
+                <a onclick="handleHash('contact')">contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <p>
+            designer and tech-based engineer from melbourne, victoria, specialising in design, arts, and security. this website is an<br class="hide-for-small" /> 
+            online portfolio which showcases my personal projects from design-oriented apps to music.
+        </p>
+    </section>
+
+    <section id="design">
+        <p>design</p>
+    </section>
+
+    <section id="development">
+        designs<br />
+
+        <div class="cv--carousel">
+            <div>
+                test
+            </div>
+            
+            <div>
+                test
+            </div>
+        </div>
+    </section>
+
+    <section id="music">
+        <div class="modal-container">
+            <div class="modal-item">
+                <img src="./images/pig-wheel.png" alt="PIG WHEEL" />
+
+                <div class="modal-item__content">
+                    PIG WHEEL [EP]<br />
+                    <a href="https://soundcloud.com/no-room/sets/pig-wheel" target="_blank">soundcloud</a>
+                    <a href="https://nathan-tucker.bandcamp.com/album/pig-wheel" target="_blank">bandcamp</a>
+                    <a href="https://www.youtube.com/watch?v=Im9YK4_vZWc" target="_blank">youtube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <a>instagram</a>
+        <a>email</a>
+    </section>
+
+    <script src="./app.js"></script> 
+</body>
+</html>
